@@ -124,6 +124,21 @@ body {
 	position: absolute;
 }
 
+
+#loginSection #topSection #crdForm #crdtbl #err1,
+#loginSection #topSection #crdForm #crdtbl #err2{
+	position: absolute;
+	top: 0em;
+	width: 250px;
+	left: 320px;
+	color: red;
+}
+#loginSection #topSection #crdForm #crdtbl #err2{
+	top: 5em;
+}
+
+
+
 #loginSection #topSection #crdForm #crdtbl .ucExstInp {
 	width: 260px;
 	background: transparent;

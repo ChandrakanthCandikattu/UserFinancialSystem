@@ -1,9 +1,6 @@
 /**
  * 
  */
-
-
-
 $(document).ready(()=>{
 	$("#frm1").validate({
         rules:{
@@ -13,15 +10,24 @@ $(document).ready(()=>{
             "passWord":{
             	required : true
             }
-            
         },
         messages: {
         	 "userId.userName":{
         		 required : "User name cannot be empty"
         	 },
         	 "passWord":{
-             	required : "password cannot be empty"
+             	required : "Password cannot be empty"
              }
-        }
+        },
+       errorElement : "span",
+       errorPlacement : (error, element)=>{
+    	   						if(element.attr("name") == "userId.userName"){
+    	   							$("#err1").html(error);
+    	   						}
+    	   						else{
+    	   							$("#err2").html(error);
+    	   						};
+       						}
+       
     });
 });

@@ -72,14 +72,14 @@
 								<!-- <input class="ucExstInp" type="text"
 								placeholder="UserName"></input> --> <form:input
 									path="userId.userName" cssClass="ucExstInp" maxlength="12" />
-							</td>
+							</td><td><span id="err1"></span></td>
 						</tr>
 						<tr>
 							<td>
 								<!-- <input class="ucExstInp" type="password"
 								placeholder="Password"></input> --> <form:password
 									path="passWord" cssClass="ucExstInp" maxlength="15" />
-							</td>
+							</td><td><span id="err2"></span></td>
 						</tr>
 					</table>
 					<input type="submit" name="submit" value="" id="sbm" />
