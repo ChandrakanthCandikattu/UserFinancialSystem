@@ -1,5 +1,3 @@
-<!--Renaming to .html for development of css and js features with JQuery in VS Code-->
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -16,6 +14,7 @@
 
 <!-- External library scripts must always be placed at top of the DOM in <head>/<body> tag -->
 <script type="text/javascript" src="views/cdnscripts/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="views/cdnscripts/jquery.validate.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="views/stylesheets/Login.css" />
 <link rel="stylesheet" type="text/css"
@@ -28,7 +27,7 @@
 	href="https://fonts.googleapis.com/css?family=Montserrat+Alternates"
 	rel="stylesheet">
 <script type="text/javascript" src="views/scripts/Login.js"></script>
-
+<script type="text/javascript" src="views/scripts/Validation.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat"
 	rel="stylesheet">
@@ -64,7 +63,7 @@
 				<img id="usrIco" src="views/icons/UserCredentials/UserName.png">
 				<img id="keyIco" src="views/icons/UserCredentials/Password.png">
 				<img id="lgnIco" src="views/icons/UserCredentials/login.png">
-				<form:form autocomplete="false" method="POST"
+				<form:form id="frm1" autocomplete="false" method="POST" 
 					action="${pageContext.request.contextPath}/req"
 					modelAttribute="login">
 					<table id="crdtbl">
@@ -83,7 +82,7 @@
 							</td>
 						</tr>
 					</table>
-					<input type="submit" name="submit" value="submit" id="sbm" />
+					<input type="submit" name="submit" value="" id="sbm" />
 				</form:form>
 				<span id="fgtPss">Forgot Password?</span>
 			</div>
