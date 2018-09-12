@@ -1,0 +1,30 @@
+#footerSection {
+  position: absolute;
+  color: green;
+  position: absolute;
+  top: 37em;
+  height: 1.5em;
+  background: white;
+  width: 84.3em;
+  left: -0.5em;
+  z-index: 1;
+}
+#footerSection #bComps {
+  position: absolute;
+  left: 51em;
+  font-family: 'Montserrat';
+  top: 0.35em;
+  font-weight: 900;
+}
+#footerSection #bComps .bComp0, #footerSection #bComps .bComp1, #footerSection #bComps .bComp2, #footerSection #bComps .bComp3 {
+  margin: 0em 0.8em 0em 0.8em;
+  cursor: pointer;
+  color: #397776;
+}
+#footerSection #cright {
+  color: white;
+  top: 2em;
+  left: 34.5em;
+  position: absolute;
+  color: #8bd3e0;
+}

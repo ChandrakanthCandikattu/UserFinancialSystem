@@ -1,0 +1,8 @@
+<hibernate-mapping>
+	<query name="query3">
+		from UserCredentials
+	</query>
+	<sql-query name="query4">
+			select * from USER_CREDENTIALS
+	</sql-query>
+</hibernate-mapping>

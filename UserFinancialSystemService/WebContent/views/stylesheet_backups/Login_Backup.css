@@ -1,0 +1,202 @@
+@charset "ISO-8859-1";
+@import "Footer.css";
+/* @import "Modals.css"; */
+
+body {
+	background-size: 1307px 700px;
+	background-image: url("../snaps/LoginTemplageOriginal.jpg");
+	height: 650px;
+	background-repeat: no-repeat;
+}
+
+#loginSection {
+	position: relative;
+}
+
+	#loginSection #topSection {
+		position: relative;
+	}
+
+		#loginSection #topSection #tsComp1 {
+			position: absolute;
+			margin-top: 0.4em;
+			background-color:#00df97;
+			width: 81.4em;
+			left: -0.5em;
+			height: 2.8em;
+		}	
+
+			#loginSection #topSection #tsComp1  #companyname {
+				letter-spacing: 1.5px;
+				color: white;
+				font-family: 'Cormorant SC';
+				font-size: 1.6rem;
+				font-weight: bolder;
+				margin-left: 10px;
+			}
+
+			#loginSection #topSection #tsComp1 #cmpTag {
+				color: brown;
+				font-family: 'Alex Brush';
+				position: absolute;
+				top:1.6em;
+				left: 4.6em;
+				width: 160px;
+				font-weight: bold;
+			}
+
+		#loginSection #topSection #loginTemplate {
+			position: absolute;
+			background: black;
+			opacity: 0.5;
+			top: 6.5em;
+			left: 29em;
+			bottom: 3em;
+			width: 400px;
+			height: 400px;
+			background-size: 25em 25em;
+		}
+
+		
+		#loginSection #topSection #lgn {
+			color: white;
+			font-weight: bolder;
+			font-family: 'Montserrat';
+			font-size: 1.3rem;
+			position: absolute;
+			top: 5.3em;
+			left: 29.7em;
+		}
+
+		#loginSection #topSection #crdForm{
+			position: absolute;	 
+			top: 18em;
+			left: 32em;
+			height: 109.5px;
+			width: 296px;
+		}
+
+			#loginSection #topSection #crdForm #usrIco {
+				position: absolute;
+				top: 2px;
+				width: 35px;
+				height: 38px;
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+				background-color: white;
+			}
+			#loginSection #topSection #crdForm #fgtPss{
+				color: white;
+				position: absolute;
+				top: 7em;
+				cursor: pointer;
+			}
+			
+			#loginSection #topSection #crdForm #fgtPss:hover{
+				text-decoration: underline;
+				color: aqua;
+			}
+
+			#loginSection #topSection #crdForm #keyIco {
+				position: absolute;
+				top: 70px;
+				width: 35px;
+				height: 38px;
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+				background-color: white;
+				
+			}
+			
+			#loginSection #topSection #crdForm #lgnIco {
+				position: absolute;
+				top: 71.5px;
+				width: 35px;
+				height: 36px;
+				left: 265px;
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+				background-color: white;
+				cursor: pointer;
+			}
+			
+
+			/* #loginSection #topSection #crdForm #lgnTk {
+				position: absolute;
+				top:3em;
+				background-color: white;
+				height: 400px;
+				width: 300px;
+			} */
+			
+
+
+			#loginSection #topSection #crdForm #crdtbl {
+				margin-top: 0px;
+				position: absolute;
+				
+			}
+
+				#loginSection #topSection #crdForm #crdtbl .ucExstInp {
+					width: 260px;
+					background: transparent;
+					outline: none;
+					margin-bottom: 28.46px;
+					margin-left:31px;
+					height:35.2px;
+					margin-top:-1px;
+					color:white;
+					font-size: 18px;
+					border: 0.016px solid whitesmoke;
+					border-left:none;
+					padding-left:7px;
+				}
+
+		
+		#loginSection #topSection #newlgn{
+			position: absolute;
+			top: 10em;
+			left: 32em;
+			height: 40px;
+			width: 300px;
+			text-align: center;
+			cursor: pointer;
+			background: white;
+			box-shadow: 0px 0px 3px 1px whitesmoke;
+		}
+
+			#loginSection #topSection #newlgn #newLgnText{
+				color: black;
+				cursor: pointer;
+				font-weight: bolder;
+				left: 60px;
+				padding: 7px;
+				position: absolute;
+				margin-top: 3.5px;
+			}
+		
+
+		#loginSection #topSection #crdbtns
+		{
+			position: absolute;
+			top: 28.2em;
+			left: 32em;
+			height: 40px;
+			width: 300px;
+			text-align: center;
+			cursor: pointer;
+			background: white;
+			box-shadow: 0px 0px 2px 1px whitesmoke;
+		}
+
+			#loginSection #topSection #crdbtns #lgnbt {
+				color: black;
+				cursor: pointer;
+				font-weight: bolder;
+				left: 110px;
+				padding: 7px;
+				position: absolute;
+				top: 3.5px;
+			}
+		
+
