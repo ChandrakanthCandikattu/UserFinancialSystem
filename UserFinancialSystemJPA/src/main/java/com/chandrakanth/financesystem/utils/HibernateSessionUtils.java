@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(value="Singleton")
+@Scope(value="singleton")
 public class HibernateSessionUtils {
 	
 	@Autowired

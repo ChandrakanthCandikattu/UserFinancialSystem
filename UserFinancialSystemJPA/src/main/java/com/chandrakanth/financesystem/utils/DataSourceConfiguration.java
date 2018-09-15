@@ -13,6 +13,7 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
@@ -25,6 +26,7 @@ import com.mchange.v2.c3p0.DriverManagerDataSource;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
+@ComponentScan(basePackages= {"com.chandrakanth.financesystem.utils"})
 public class DataSourceConfiguration {
 
 	public DataSourceConfiguration() {

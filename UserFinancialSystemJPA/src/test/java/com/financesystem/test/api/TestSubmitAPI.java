@@ -23,7 +23,7 @@ public class TestSubmitAPI {
 	@Test
 	public void testSubmitLogin() {
 		DAOImpl daoImpl = new DAOImpl();
-		daoImpl.setSessionFactory(sessionFactory);
+//		daoImpl.setSessionFactory(sessionFactory);
 		daoImpl.persistValues(null, null);
 	}
 	

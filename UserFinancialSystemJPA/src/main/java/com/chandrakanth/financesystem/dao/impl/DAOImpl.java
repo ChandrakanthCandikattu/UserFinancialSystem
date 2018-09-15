@@ -5,12 +5,12 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chandrakanth.financesystem.entity.UserCredentials;
 import com.chandrakanth.financesystem.entity.UserProfile;
+import com.chandrakanth.financesystem.utils.HibernateSessionUtils;
 
 @Component
 public class DAOImpl {
@@ -25,18 +25,18 @@ public class DAOImpl {
 		this.factory = sFactory;
 	}
 
-	@Autowired
-	private SessionFactory factory;
+	
+	private SessionFactory factory = HibernateSessionUtils.getSessionFactoryInstance();
 
-	public void setSessionFactory(SessionFactory factory) {
+/*	public void setSessionFactory(SessionFactory factory) {
 		this.factory = factory;
-	}
+	}*/
 
 	@Transactional
 	public boolean persistValues(UserCredentials userCredentials, UserProfile uProfile) {
 		Session session = null;
 		/*try {*/
-			LOGGER.info("***Getting the current transaction***");
+//			LOGGER.info("***Getting the current transaction***");
 			session = factory.openSession();
 			Transaction tr = session.beginTransaction();
 

@@ -36,7 +36,6 @@ $(document).ready(()=>{
     	   $.ajax({
     		   
     	   })
-    	   /*$form.submit();*/
        }
     });
 	
