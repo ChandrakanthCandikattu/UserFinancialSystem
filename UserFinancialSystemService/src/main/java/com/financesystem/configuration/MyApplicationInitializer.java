@@ -2,6 +2,8 @@ package com.financesystem.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import com.chandrakanth.financesystem.utils.DataSourceConfiguration;
+
 /**
  * @author Chandrakanth
  */
@@ -15,12 +17,12 @@ public class MyApplicationInitializer
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { UserFinancialSystemBeanConfigurator.class };
+		return new Class[] { DataSourceConfiguration.class };
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return null;
+		return new Class<?>[] {UserFinancialSystemBeanConfigurator.class};
 	}
 
 	@Override

@@ -2,7 +2,7 @@ package com.chandrakanth.financesystem.entity.dto;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class UserCredentialsTO {
+public class UserCredentialsDTO {
 
 	private UserCredentialsIdPKDTO userId;
 	private String activeStatus;
@@ -68,9 +68,9 @@ public class UserCredentialsTO {
 			return true;
 		if (obj == null)
 			return false;
-		if (!(obj instanceof UserCredentialsTO))
+		if (!(obj instanceof UserCredentialsDTO))
 			return false;
-		UserCredentialsTO other = (UserCredentialsTO) obj;
+		UserCredentialsDTO other = (UserCredentialsDTO) obj;
 		if (activeStatus == null) {
 			if (other.activeStatus != null)
 				return false;

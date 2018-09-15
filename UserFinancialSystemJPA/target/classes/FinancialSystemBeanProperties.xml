@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -14,10 +14,10 @@
 		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.1.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 
-	<!-- Used to find the packages which will have annotations , and activates them -->
+	Used to find the packages which will have annotations , and activates them
 	<context:component-scan base-package="com.chandrakanth.financesystem.*"></context:component-scan>
 	<context:property-placeholder location="classpath:db.properties" />
-	<!-- DataSource connection - <Database System of your own choice>-->
+	DataSource connection - <Database System of your own choice>
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
 		<property name="driverClassName" value="${driverClass}" />
@@ -26,8 +26,8 @@
 		<property name="password" value="${pass}" />
 	</bean>
 
-	<!-- EntityManagerFactory - Spring style configuration -->
-	<!-- <bean id="entityManagerFactory"
+	EntityManagerFactory - Spring style configuration
+	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		p:packagesToScan="com.chandrakanth.financesystem.entity"
 		p:dataSource-ref="dataSource">
@@ -37,7 +37,7 @@
 				<property name="showSql" value="true" />
 			</bean>
 		</property>
-	</bean> -->
+	</bean>
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="packagesToScan">
@@ -60,11 +60,12 @@
         </property>
 	</bean>
 
-	<!-- Transactions -->
+	Transactions
 	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	<!-- enable the configuration of transactional behavior based on annotation, @Transactional -->
+	enable the configuration of transactional behavior based on annotation, @Transactional
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 </beans>
+ -->

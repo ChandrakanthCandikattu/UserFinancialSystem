@@ -4,21 +4,16 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "BANK_ACCOUNT_DETAILS")
@@ -78,11 +73,11 @@ public class BankAccountDetails implements Serializable {
 	@JoinColumn(name = "CARD_NUMBER")
 	private Set<ElectronicCardDetails> electronicCardDetails;
 	
-	// Unidirectional
+/*	// Unidirectional
 	@Transient
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumns({ @JoinColumn(name = "USER_NAME"), @JoinColumn(name = "MOBILE_NUMBER") })
-	private UserCredentials userCredentials;
+	private UserCredentials userCredentials;*/
 	
 	public String getUserName() {
 		return userName;
@@ -244,13 +239,13 @@ public class BankAccountDetails implements Serializable {
 		this.personalSalaryAcc = personalSalaryAcc;
 	}
 
-	public UserCredentials getUserCredentials() {
+/*	public UserCredentials getUserCredentials() {
 		return userCredentials;
 	}
 
 	public void setUserCredentials(UserCredentials userCredentials) {
 		this.userCredentials = userCredentials;
-	}
+	}*/
 
 	@Override
 	public int hashCode() {

@@ -22,12 +22,22 @@ $(document).ready(()=>{
        errorElement : "span",
        errorPlacement : (error, element)=>{
     	   						if(element.attr("name") == "userId.userName"){
-    	   							$("#err1").html(error);
+									   $("#err1").html(error);
     	   						}
     	   						else{
-    	   							$("#err2").html(error);
+									   $("#err2").html(error);
     	   						};
-       						}
-       
+       						},
+       submitHandler: (form)=>{
+    	   var tbl = $("#frm1").first();
+    	   var uName = tbl.first().val();
+    	   var pass  =  tb1.last().val();
+    	   alert(uName);
+    	   $.ajax({
+    		   
+    	   })
+    	   /*$form.submit();*/
+       }
     });
+	
 });

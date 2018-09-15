@@ -1,6 +1,6 @@
 package com.chandrakanth.financesystem.entity.dto;
 
-public class UserIdTO {
+public class UserIdDTO {
 
 	private String userName;
 

@@ -4,6 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
 <%@include file="jsp/Footer.html"%>
+<%@include file="jsp/Header.html"%>
 <!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,7 @@
 	href="https://fonts.googleapis.com/css?family=Montserrat+Alternates"
 	rel="stylesheet">
 <script type="text/javascript" src="views/scripts/Login.js"></script>
-<script type="text/javascript" src="views/scripts/Validation.js"></script>
+<script type="text/javascript" src="views/scripts/LoginValidation.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat"
 	rel="stylesheet">
@@ -49,10 +50,6 @@
 	<!-- Move this section to Header.html, as this section appears across web pages-->
 	<section id="loginSection">
 		<div id="topSection">
-			<div id="tsComp1">
-				<span id="companyname">Chandra FinDocs</span> <span id="cmpTag">For
-					a Better Documentation</span>
-			</div>
 			<div></div>
 			<div id="loginTemplate"></div>
 			<div id="lgn">Sign In</div>
@@ -63,23 +60,19 @@
 				<img id="usrIco" src="views/icons/UserCredentials/UserName.png">
 				<img id="keyIco" src="views/icons/UserCredentials/Password.png">
 				<img id="lgnIco" src="views/icons/UserCredentials/login.png">
-				<form:form id="frm1" autocomplete="false" method="POST" 
+				<form:form id="frm1" autocomplete="false" method="POST"
 					action="${pageContext.request.contextPath}/req"
 					modelAttribute="login">
 					<table id="crdtbl">
 						<tr>
-							<td>
-								<!-- <input class="ucExstInp" type="text"
-								placeholder="UserName"></input> --> <form:input
-									path="userId.userName" cssClass="ucExstInp" maxlength="12" />
-							</td><td><span id="err1"></span></td>
+							<td><form:input path="userId.userName" cssClass="ucExstInp"
+									maxlength="12" /></td>
+							<td><span id="err1"></span></td>
 						</tr>
 						<tr>
-							<td>
-								<!-- <input class="ucExstInp" type="password"
-								placeholder="Password"></input> --> <form:password
-									path="passWord" cssClass="ucExstInp" maxlength="15" />
-							</td><td><span id="err2"></span></td>
+							<td><form:password path="passWord" cssClass="ucExstInp"
+									maxlength="15" /></td>
+							<td><span id="err2"></span></td>
 						</tr>
 					</table>
 					<input type="submit" name="submit" value="" id="sbm" />

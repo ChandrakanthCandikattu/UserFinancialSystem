@@ -1,4 +1,3 @@
-
 /**
  * @author Chandrakanth
  */
@@ -21,8 +20,8 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @Configuration // Replacement to Spring Configuration File
 @EnableWebMvc // Replacement to <mvc:annotation-config/>
-@ComponentScan(basePackages = { "com.financesystem.controllers" }) // Replacement to
-// <context:component-scan
+@ComponentScan(basePackages = { "com.financesystem.controllers","com.financesystem.api" }) 
+// Replacement to <context:component-scan>
 public class UserFinancialSystemBeanConfigurator extends WebMvcConfigurerAdapter {
 	@Bean
 	public ViewResolver viewResolver() {

@@ -3,12 +3,15 @@ package com.chandrakanth.financesystem.utils;
 import javax.annotation.PostConstruct;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope(value="Singleton")
 public class HibernateSessionUtils {
-
-	/*@Autowired*/
+	
+	@Autowired
 	private SessionFactory beanSessionFactory;
 
 	private static SessionFactory sessionFactory;
@@ -17,7 +20,7 @@ public class HibernateSessionUtils {
 		super();
 	}
 
-	public static SessionFactory getSessionFactory() {
+	public static SessionFactory getSessionFactoryInstance() {
 		return sessionFactory;
 	}
 
