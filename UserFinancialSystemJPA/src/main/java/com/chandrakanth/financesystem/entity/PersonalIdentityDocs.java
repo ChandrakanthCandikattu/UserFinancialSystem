@@ -41,6 +41,10 @@ public class PersonalIdentityDocs implements Serializable {
 	@SequenceGenerator(allocationSize = 50, name = "SEQ_PI_DOCS", sequenceName = "SEQ_PI_DOCS")
 	@Column(name = "SEQ_PI_DOCS")
 	private String seqPiDOC;
+	@Column(name = "USER_NAME")
+	private String userName
+	@Column(name = "MOBILE_NUMBER")
+	private String mobileNumber;
 	@Column(name = "ACTIVE_STATUS", columnDefinition = "DEFAULTS TO 'Y' IN DB")
 	private String activeStatus;
 	@Column(name = "PAN_ID")
@@ -57,6 +61,8 @@ public class PersonalIdentityDocs implements Serializable {
 	private String voterId;
 	@Column(name = "REFERENCE_NUMBER", columnDefinition = "APPLICABLE ONLY TO DRIVING LICENSE")
 	private String referenceNumber;
+	@Column(name="GENDER") // TODO: ADD "GENDER" TO PERSONAL_IDENTITY_DOCS TABLE
+	private Character gender;
 	@Column(name = "V_REG_NUMBER", columnDefinition = "FOREIGN KEY REFERENCING VEHICLE_DETAILS ENTITY")
 	private String vRegNumber;
 	@Column(name = "V_CLASS", nullable = true)
@@ -103,15 +109,6 @@ public class PersonalIdentityDocs implements Serializable {
 	private String createdDateTime;
 	@Column(name = "MODIFIED_DATETIME")
 	private String modifiedDateTime;
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-
-	@ManyToOne
-	@JoinColumns({ @JoinColumn(name = "USER_NAME"), @JoinColumn(name = "MOBILE_NUMBER") })
-	private UserCredentials userCredentials;
-
-	@OneToOne
-	@JoinColumns({ @JoinColumn(name = "V_REGISTRATION_NUM") })
-	private VehicleDetails vehicleDetails;
 
 	public String getSeqPiDOC() {
 		return seqPiDOC;
