@@ -1,5 +1,7 @@
 package com.chandrakanth.financesystem.dao.impl;
 
-public class AbstractDAOImpl {
+import com.chandrakanth.financesystem.dao.AbstractDAO;
+
+public class AbstractDAOImpl implements AbstractDAO {
 
 }

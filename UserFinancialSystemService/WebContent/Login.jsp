@@ -5,7 +5,6 @@
 <%@ page isELIgnored="false"%>
 <%@include file="jsp/Footer.html"%>
 <%@include file="jsp/Header.html"%>
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
 <!DOCTYPE html>
 <html>
 
@@ -20,6 +19,8 @@
 	href="views/stylesheets/Login.css" />
 <link rel="stylesheet" type="text/css"
 	href="views/stylesheets/Footer.css" />
+<link rel="stylesheet" type="text/css"
+	href="views/stylesheets/M.css" />
 <link href="https://fonts.googleapis.com/css?family=Sanchez"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed"
@@ -29,7 +30,7 @@
 	rel="stylesheet">
 <script type="text/javascript" src="views/scripts/Login.js"></script>
 <script type="text/javascript" src="views/scripts/LoginValidation.js"></script>
-
+<script type="text/javascript" src="views/scripts/ModalScript.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Varela+Round"
@@ -70,7 +71,7 @@
 							<td><span id="err1"></span></td>
 						</tr>
 						<tr>
-							<td><form:password path="passWord" cssClass="ucExstInp"
+							<td><form:password path="passWord" cssClass="ucExstInp" 
 									maxlength="15" /></td>
 							<td><span id="err2"></span></td>
 						</tr>
@@ -81,44 +82,79 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- The Modal -->
+	<%-- 	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<form:form id="frm2" autocomplete="false" method="POST"
+				action="${pageContext.request.contextPath}/req"
+				modelAttribute="login">
+				<table id="uf2">
+					<tr>
+					<tr>
+						<td><form:label for="UserName"
+								path="userProfile.userCredentials.userId.userName"
+								cssClass="sgnupf1" /></td>
+						<td><form:input
+								path="userProfile.userCredentials.userId.userName"
+								cssClass="sgnupf1" maxlength="12" /></td>
+						<td><span id="err1"></span></td>
+					</tr>
+					<tr>
+						<td><form:label for="UserName"
+								path="userProfile.userCredentials.userId.mobileNumber"
+								cssClass="sgnupf1" /></td>
+						<td><form:input
+								path="userProfile.userCredentials.userId.mobileNumber"
+								cssClass="sgnupf1" maxlength="12" /></td>
+						<td><span id="err3"></span></td>
+
+						<td><label class="ucInput" for="MobileNumber">MOBILE
+								NUMBER </label></td>
+						<td><input class="ucInput" id="mobileNumber" type="text"></input>
+						</td>
+					</tr>
+					<tr>
+						<td><form:label for="MobileNumber"
+								path="userProfile.userCredentials.userId.mobileNumber"
+								cssClass="sgnupf1" /></td>
+						<td><form:input
+								path="userProfile.userCredentials.userId.mobileNumber"
+								cssClass="sgnupf1" maxlength="12" /></td>
+						<td><span id="err1"></span></td>
+
+
+
+
+
+						<td><label class="ucInputLable" for="firstName">FIRST
+								NAME</label></td>
+						<td><input class="ucInput" id="firstName" type="text"></input>
+						</td>
+						<td><label class="ucInputLable" for="lastName">LAST
+								NAME</label></td>
+						<td><input class="ucInput" id="lastName" type="text"></input></td>
+					</tr>
+					<tr>
+						<td><label class="ucInput" for="emailId">EMAIL ID</label></td>
+						<td><input class="ucInput" id="emailId" type="email"></input></td>
+					</tr>
+					<tr>
+						<td><label class="ucInput" for="age">AGE</label></td>
+						<td><input class="ucInput" id="age" type="text"></input></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="button"></input></td>
+					</tr>
+				</table>
+			</form:form>
+		</div>
+	</div> --%>
 </body>
 <!-- <div id="newUserForm">
-		<table id="userForm2">
-			<tr>
-				<td><label class="ucInput" for="UserName">USER NAME</label></td>
-				<td><input class="ucInput" id="UserName" type="text"></input></td>
-			</tr>
-			<tr>
-				<td><label class="ucInput" for="MobileNumber">MOBILE
-						NUMBER </label></td>
-				<td><input class="ucInput" id="mobileNumber" type="text"></input>
-				</td>
-			</tr>
-			<tr>
-				<td><label class="ucInputLable" for="firstName">FIRST
-						NAME</label></td>
-				<td><input class="ucInput" id="firstName" type="text"></input>
-				</td>
-				<td><label class="ucInputLable" for="lastName">LAST
-						NAME</label></td>
-				<td><input class="ucInput" id="lastName" type="text"></input></td>
-			</tr>
-			<tr>
-				<td><label class="ucInput" for="emailId">EMAIL ID</label></td>
-				<td><input class="ucInput" id="emailId" type="email"></input></td>
-			</tr>
-			<tr>
-				<td><label class="ucInput" for="age">AGE</label></td>
-				<td><input class="ucInput" id="age" type="text"></input></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="button"></input></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
+		
 	</div> -->
 </html>

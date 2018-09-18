@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chandrakanth.financesystem.entity.UserCredentials;
@@ -21,10 +22,6 @@ public class DAOImpl {
 		super();
 	}
 
-	public DAOImpl(SessionFactory sFactory) {
-		this.factory = sFactory;
-	}
-
 	
 	private SessionFactory factory = HibernateSessionUtils.getSessionFactoryInstance();
 
@@ -32,7 +29,7 @@ public class DAOImpl {
 		this.factory = factory;
 	}*/
 
-	@Transactional
+	@Transactional(isolation=Isolation.READ_COMMITTED)
 	public boolean persistValues(UserCredentials userCredentials, UserProfile uProfile) {
 		Session session = null;
 		/*try {*/
@@ -40,11 +37,11 @@ public class DAOImpl {
 			session = factory.openSession();
 			Transaction tr = session.beginTransaction();
 
-			if (uProfile != null) {
+			/*if (uProfile != null) {
 				session.persist(uProfile);
 			} else if (userCredentials != null) {
 				session.persist(userCredentials);
-			}
+			}*/
 
 			Query q = session.getNamedQuery("query3");
 			q.setMaxResults(3);

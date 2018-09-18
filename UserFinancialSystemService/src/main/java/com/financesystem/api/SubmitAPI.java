@@ -11,15 +11,8 @@ import com.chandrakanth.financesystem.entity.dto.UserCredentialsDTO;
 //@Scope("request")
 @Service
 public class SubmitAPI {
-/*
-	@Autowired
-	public DAOImpl daoImpl;*/
 
-	public SubmitAPI() {
-
-	}
-
-	public boolean retrunInstance(final UserCredentialsDTO uCTO) {
+	public boolean checkForLoginUsers(final UserCredentialsDTO uCTO) {
 		UserCredentials uC = new UserCredentials();
 		uC.setUserId(new UserCredentialsIdPK(uCTO.getUserId().getUserName(), uCTO.getUserId().getMobileNumber()));
 		uC.setPassWord(uCTO.getPassWord());
@@ -30,4 +23,9 @@ public class SubmitAPI {
 		return false;
 	}
 
+	public boolean createNewUser() {
+		
+		return false;
+	}
+	
 }

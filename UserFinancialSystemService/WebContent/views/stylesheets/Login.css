@@ -1,7 +1,7 @@
 @charset "ISO-8859-1";
 
 @import url(Footer.css);
-/* @import "Modals.css"; */
+@import url(ModalDesign.css);
 body {
 	background-size: 1352px 685px;
 	background-image: url("../snaps/LoginTemplageOriginal.jpg");

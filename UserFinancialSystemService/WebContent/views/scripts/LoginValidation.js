@@ -29,12 +29,8 @@ $(document).ready(()=>{
     	   						};
        						},
        submitHandler: (form)=>{
-    	   var tbl = $("#frm1").first();
-    	   var uName = tbl.first().val();
-    	   var pass  =  tb1.last().val();
-    	   alert(uName);
     	   $.ajax({
-    		   
+    		   																																																																																																				
     	   })
        }
     });
