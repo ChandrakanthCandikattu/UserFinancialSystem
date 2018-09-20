@@ -1,0 +1,92 @@
+{
+	"licenseClasses": {
+		"MC 50CC": "Motorcycles with an engine capacity of 50 cc or less",
+		"FVG": "Motorcycles of any engine capacity, but without gears, including mopeds and scooters",
+		"M/CYCL.WOG": "Motorcycle Without Gear  all motorcycles, Scooters",
+		"M/CYCL.WG": "Motorcycle With Gear all motorcycles",
+		"LMV": "Light Motor Vehicle including motorcars, jeeps, taxis, delivery vans",
+		"LMV-NT": "Light Motor Vehicle Non Transport for personal use only",
+		"LMV-TR": "Light Motor Vehicle Transport for commercial transportation including light goods carrier",
+		"HMV": "Heavy Motor Vehicle",
+		"HPMV": "Heavy Passenger Motor Vehicle",
+		"HTV": "Heavy Transport Vehicle (Heavy Goods and Heavy Passenger Motor Vehicle",
+		"TRAILER": "A person holding a heavy vehicle driving licence can only apply for heavy trailer licence"
+	},
+	"personalIdentityType": {
+		"AADHAR": "AADHAR",
+		"PAN": "PAN",
+		"DL": "DRIVING LICENSE",
+		"VOTER ID": "VOTER ID",
+		"PASSPORT": "PASSPORT",
+		"NSR": "NATIONAL SKILLS REGISTRY",
+		"BIRTH": "BIRTH CERTIFICATE"
+	},
+	"personalIdentityCategory": {
+		"c1": "CVIIL",
+		"c2": "PROFESSIONAL"
+	},
+	"vehicleDocType": {
+		"C": "CURRENT",
+		"S": "SAVINGS",
+		"FD": "FIXED DEPOSITS"
+	},
+	"bankAccountOwnershipType": {
+		"SNGL": "SINGLE",
+		"JNT": "JOINT"
+	},
+	"cardTypes": {
+		"CRD": "CREDIT",
+		"DBT": "DEBIT",
+		"EMI": "EMI",
+		"MDCL": "MEDICAL",
+		"SHP": "SHOPPING",
+		"TR": "TRANSPORTATION"
+	},
+	"educationStandard": {
+		"HS": "HIGH SCHOOL",
+		"SHS": "SECONDARY HIGH SCHOOL",
+		"UG": "GRADUATION",
+		"PG": "POST GRADUATION"
+	},
+	"courses": [
+		{
+			"GRADE 10": {
+				"SB": "STATE BOARD",
+				"CBSE": "CENTRAL BOARD SECONDARY EDUCATION"
+			}
+		},
+		{
+			"INTERMEDIATE": {
+				"M.P.C": "MATHEMATICS, PHYSICS AND CHEMISTRY",
+				"M.E.C": "MATHEMATICS, ECONOMICS AND COMMERCE",
+				"C.E.C": "CIVICS, ECONOMICS AND COMMERCE",
+				"H.E.C": "HISTORY, ECONOMICS & COMMERCE",
+				"BI.P.C": "BIOLOGY, PHYSICS & CHEMISTRY"
+			}
+		},
+		{
+			"B.TECH": {
+				"EE": "ELECTRICAL AND ELECTRONICS",
+				"EC": "ELECTRONICS AND COMMUNICATION",
+				"M": "MECHANICAL",
+				"IT": "INFORMATION & TECHNOLOGY",
+				"CS": "COMPUTER SCIENCE",
+				"RA": "ROBOTICS AND AUTOMATION",
+				"AT": "AUTOMATION",
+				"CM": "CHEMICAL AND METALLURGICAL"
+			}
+		},
+		{
+			"M.TECH": {
+				"EE": "ELECTRICAL AND ELECTRONICS",
+				"EC": "ELECTRONICS AND COMMUNICATION",
+				"M": "MECHANICAL",
+				"IT": "INFORMATION & TECHNOLOGY",
+				"CS": "COMPUTER SCIENCE",
+				"RA": "ROBOTICS AND AUTOMATION",
+				"AT": "AUTOMATION",
+				"CM": "CHEMICAL AND METALLURGICAL"
+			}
+		}
+	]
+}
